@@ -252,7 +252,7 @@ def clone_git_repo(git_url, target_dir, commit=None, retry_times=GIT_MAX_RETRIES
     logger.debug("url = '%s', dir = '%s', commit = '%s'",
                  git_url, target_dir, commit)
 
-    cmd = ["git", "clone", git_url, quote(target_dir)]
+    cmd = ["git", "clone", "git://dist-git-qa.app.eng.bos.redhat.com/rpms/osbs-test-hamburger-docker-WRONG", quote(target_dir)]
 
     logger.debug("cloning '%s'", cmd)
     for counter in range(retry_times + 1):
